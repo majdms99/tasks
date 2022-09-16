@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%20//majdms99.github.io/tasks/static/css/main.29cd549e.css",
+    "main.js": "/%20//majdms99.github.io/tasks/static/js/main.53dfbd54.js",
+    "index.html": "/%20//majdms99.github.io/tasks/index.html",
+    "main.29cd549e.css.map": "/%20//majdms99.github.io/tasks/static/css/main.29cd549e.css.map",
+    "main.53dfbd54.js.map": "/%20//majdms99.github.io/tasks/static/js/main.53dfbd54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29cd549e.css",
+    "static/js/main.53dfbd54.js"
+  ]
+}
