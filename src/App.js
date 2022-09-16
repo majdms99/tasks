@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import './App.css';
 import Register from './components/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './components/Home';
 import Login from './components/Login';
 import Task from './components/Task';
 import { ProtectedRoute } from './components/ProtectedRoute'

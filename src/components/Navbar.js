@@ -8,13 +8,11 @@ import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import { Container } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    const token = JSON.parse(localStorage.getItem("token"));
-    const headers = { Authorization: `Bearer ${token}` }
+
     const navigate = useNavigate();
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
