@@ -1,24 +1,46 @@
-import logo from './logo.svg';
+import { createTheme, ThemeProvider } from '@mui/material';
 import './App.css';
+import Register from './components/Register';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home';
+import Login from './components/Login';
+import Task from './components/Task';
+import { ProtectedRoute } from './components/ProtectedRoute'
+import Profile from './components/Profile';
 
 function App() {
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#ffcc80',
+      },
+
+    },
+  });
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+
+          <Route path='/' element={
+            <ProtectedRoute>
+              <Task />
+            </ProtectedRoute>} />
+          <Route path='/profile' element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>} />
+        </Routes>
+
+      </BrowserRouter>
+    </ThemeProvider >
   );
 }
 
